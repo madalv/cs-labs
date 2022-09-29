@@ -11,7 +11,7 @@ If needed and written by the author.
 
 ## Objectives:
 
-* Get familiar with the basics of Cryptography and classical cyphers.
+* Get familiar with the basics of Cryptography and classical ciphers.
 * Implement 4 types of classical cyphers:
   - Caesar cipher,
   - Caesar cipher with an alphabet permutation,

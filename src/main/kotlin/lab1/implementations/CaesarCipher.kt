@@ -4,7 +4,7 @@ import lab1.Cipher
 import java.util.*
 
 open class CaesarCipher(val alphabet: String): Cipher {
-    val alphabetUpper = alphabet.uppercase(Locale.ENGLISH)
+    protected val alphabetUpper = alphabet.uppercase(Locale.ENGLISH)
 
     override fun encrypt(plaintext: String, key: Any): String {
         var ciphertext = ""
