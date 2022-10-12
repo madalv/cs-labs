@@ -1,10 +1,9 @@
-package lab1.implementations
+package lab1.classicalciphers.implementations
 
-import lab1.Cipher
+import lab1.classicalciphers.Cipher
 import java.util.*
-import kotlin.math.log2
 
-class PlayfairCipher(private val alphabet: String): Cipher {
+class PlayfairCipher(private val alphabet: String) : Cipher {
 
     private val extraKey = "X"
 
@@ -16,7 +15,7 @@ class PlayfairCipher(private val alphabet: String): Cipher {
         val table = constructTable(key as String)
 
         for (i in pt.indices step 2)
-            ciphertext += transformDigraph(table, pt[i], pt[i + 1],1, 5)
+            ciphertext += transformDigraph(table, pt[i], pt[i + 1], 1, 5)
         return ciphertext
     }
 
@@ -59,7 +58,7 @@ class PlayfairCipher(private val alphabet: String): Cipher {
         else getOppositeCorners(table, l1Row, l1Col, l2Row, l2Col)
     }
 
-     private fun constructTable(key: String): String {
+    private fun constructTable(key: String): String {
         var table = alphabet.uppercase()
         for (i in key.length - 1 downTo 0)
             table = key[i] + table.replace(key[i].toString(), "")
@@ -70,7 +69,7 @@ class PlayfairCipher(private val alphabet: String): Cipher {
         return table[(l1Index + shift) % table.length].toString() + table[(l2Index + shift) % table.length]
     }
 
-    private fun getOppositeCorners(table: String, l1Row: Int, l1Col: Int, l2Row: Int, l2Col: Int): String{
+    private fun getOppositeCorners(table: String, l1Row: Int, l1Col: Int, l2Row: Int, l2Col: Int): String {
         return table[l1Row * 5 + l2Col].toString() + table[l2Row * 5 + l1Col]
     }
 }

@@ -1,4 +1,4 @@
-package lab1
+package lab1.classicalciphers
 
 interface Cipher {
     fun encrypt(plaintext: String, key: Any): String

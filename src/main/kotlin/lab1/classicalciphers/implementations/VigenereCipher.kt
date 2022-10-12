@@ -1,6 +1,6 @@
-package lab1.implementations
+package lab1.classicalciphers.implementations
 
-class VigenereCipher(alphabet: String): CaesarCipher(alphabet) {
+class VigenereCipher(alphabet: String) : CaesarCipher(alphabet) {
 
     override fun encrypt(plaintext: String, key: Any): String {
         var ciphertext = ""
