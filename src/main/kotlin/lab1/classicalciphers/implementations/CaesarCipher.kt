@@ -1,9 +1,9 @@
-package lab1.implementations
+package lab1.classicalciphers.implementations
 
-import lab1.Cipher
+import lab1.classicalciphers.Cipher
 import java.util.*
 
-open class CaesarCipher(val alphabet: String): Cipher {
+open class CaesarCipher(val alphabet: String) : Cipher {
     protected val alphabetUpper = alphabet.uppercase(Locale.ENGLISH)
 
     override fun encrypt(plaintext: String, key: Any): String {
@@ -21,12 +21,10 @@ open class CaesarCipher(val alphabet: String): Cipher {
         return if (char.isUpperCase()) {
             val ix = alphabetUpper.indexOf(char)
             alphabetUpper[calculateTransformedIndex(ix, key)]
-        }
-        else if (char.isLowerCase()) {
+        } else if (char.isLowerCase()) {
             val ix = alphabet.indexOf(char)
             alphabet[calculateTransformedIndex(ix, key)]
-        }
-        else return ' '
+        } else return ' '
     }
 
     // in case the (char index + key) is ever negative, just add alphabet.size to get correct modulo
