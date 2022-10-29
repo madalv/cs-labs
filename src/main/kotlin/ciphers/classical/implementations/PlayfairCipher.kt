@@ -1,6 +1,6 @@
-package lab1.classicalciphers.implementations
+package ciphers.classical.implementations
 
-import lab1.classicalciphers.Cipher
+import ciphers.classical.Cipher
 import java.util.*
 
 class PlayfairCipher(private val alphabet: String) : Cipher {

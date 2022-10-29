@@ -1,4 +1,4 @@
-package lab2.streamblockciphers.implementations;
+package ciphers.symmetric.implementations;
 
 import java.nio.charset.Charset;
 import java.util.Arrays;

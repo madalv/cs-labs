@@ -1,6 +1,6 @@
-package lab2.streamblockciphers.tests;
+package tests.symmetric;
 
-import lab2.streamblockciphers.implementations.Rabbit;
+import ciphers.symmetric.implementations.Rabbit;
 import org.junit.Before;
 import org.junit.Test;
 

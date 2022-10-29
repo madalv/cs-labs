@@ -1,4 +1,4 @@
-package lab1.classicalciphers.implementations
+package ciphers.classical.implementations
 
 class VigenereCipher(alphabet: String) : CaesarCipher(alphabet) {
 

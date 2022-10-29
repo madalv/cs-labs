@@ -1,4 +1,4 @@
-package lab1.classicalciphers.implementations
+package ciphers.classical.implementations
 
 import kotlin.random.Random
 

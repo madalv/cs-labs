@@ -1,14 +1,12 @@
-package lab2.streamblockciphers.tests;
+package tests.symmetric;
 
-import lab2.streamblockciphers.implementations.SDES;
+import ciphers.symmetric.implementations.SDES;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class SDESTest {
-
-
     @Test
     public void encrypt() {
         byte msg = 0b00010111;
